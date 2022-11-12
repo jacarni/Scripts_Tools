@@ -1,0 +1,11 @@
+#Find and delete files older than 80 days
+#jacarni/Scripts_Tools is licensed under the
+#GNU General Public License v3.0 
+echo >> path log clear-files.log
+echo  "************************* Deleting Script Start" >> /root/scripts/clear-files.log
+date >> /root/scripts/clear-files.log
+echo >> /root/scripts/clear-files.log
+find find /path/ -mtime +80 -type f -exec rm {} \; -exec echo {} >> /root/scripts/clear-files.log \;
+echo >> /root/scripts/clear-files.log
+echo  "Deleting Script End*******************************" >> /root/scripts/clear-files.log
+echo >> /root/scripts/clear-files.log
